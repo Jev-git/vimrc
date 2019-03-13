@@ -192,6 +192,12 @@ nnoremap <leader>o o<esc>k
 nnoremap <leader>O O<esc>j
 "/*}}}*/
 
+" Add/remove semicolon at end of line
+"/*{{{*/
+inoremap <expr> <leader>; getline('.') =~ ';$' ? "\<esc>mq\$x`qa" : "\<esc>mqA;\<esc>`qa"
+nnoremap <expr> <leader>; getline('.') =~ ';$' ? "mq\$x`q" : "mqA;\<esc>`q"
+"/*}}}*/
+
 "/*}}}*/
 
 " For specific FileType

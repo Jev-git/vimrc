@@ -128,6 +128,9 @@ nnoremap <leader>php :-1read ~/.vim/templates/bracket.php<CR>o
 nnoremap <leader>flask :-1read ~/.vim/templates/flask.py<CR>
 "/*}}}*/
 
+" This mapping allows skip a single char to the right in insert mode to skip close brackets
+inoremap <leader>l <esc>la
+
 " Auto closing brackets in insert mode
 "/*{{{*/
 inoremap " ""<left>

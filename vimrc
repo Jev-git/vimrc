@@ -106,6 +106,14 @@ vnoremap <leader><leader> <esc>l
 cabbrev <leader><leader> <esc>
 "/*}}}*/
 
+" Toggle: relativenumber, hlsearch
+"/*{{{*/
+inoremap <leader>re <esc>:set<space>relativenumber!<cr>a
+nnoremap <leader>re :set<space>relativenumber!<cr>
+inoremap <leader>hl <esc>:set<space>hlsearch!<cr>a
+nnoremap <leader>hl :set<space>hlsearch!<cr>
+"/*}}}*/
+
 " Quickly open and source vimrc"
 "/*{{{*/
 nnoremap <leader>rc :vsplit $VIM/vimrc<cr>
@@ -178,14 +186,6 @@ nnoremap <leader>ws <C-w>s<C-w>j
 nnoremap <leader>wo :only<cr>
 "/*}}}*/
 
-" Toggle: relativenumber, hlsearch
-"/*{{{*/
-inoremap <leader>re <esc>:set<space>relativenumber!<cr>a
-nnoremap <leader>re :set<space>relativenumber!<cr>
-inoremap <leader>hl <esc>:set<space>hlsearch!<cr>a
-nnoremap <leader>hl :set<space>hlsearch!<cr>
-"/*}}}*/
-
 " Add newline from normal mode
 "/*{{{*/
 nnoremap <leader>o o<esc>k
@@ -225,6 +225,7 @@ nnoremap <expr> <leader>; getline('.') =~ ';$' ? "mq\$x`q" : "mqA;\<esc>`q"
 :augroup filetype_vim
 :	autocmd!
 :	autocmd FileType vim setlocal foldmethod=marker
+:	autocmd FileType vim setlocal foldcolumn=4
 :	autocmd FileType vim nnoremap <buffer> <leader>a za
 :	autocmd FileType vim inoremap <buffer> <leader>a <esc>za
 :	autocmd FileType vim vnoremap <buffer> <leader>f zf

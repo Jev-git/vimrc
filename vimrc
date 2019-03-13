@@ -161,6 +161,10 @@ iabbrev <leader>@ tuannguyendinh224@gmail.com
 inoremap <leader>re <esc>:set<space>relativenumber!<cr>a
 nnoremap <leader>re :set<space>relativenumber!<cr>
 
+" Add newline from normal mode
+nnoremap <leader>o o<esc>k
+nnoremap <leader>O O<esc>j
+
 " Auto indent at open and save
 autocmd BufWritePre,BufRead *.html :normal gg=G
 

@@ -71,6 +71,7 @@ set title		" Display filename on title bar
 set ignorecase		" Search case-insensitive
 set smartcase		" Search case-sensitive when using capital letter
 set hlsearch		" Highlight search results
+set autoindent		" Auto indent on newline
 let mapleader = ","
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
@@ -104,9 +105,9 @@ inoremap () ()
 inoremap [] []
 inoremap {} {}
 
-inoremap {<CR> {<CR>}<ESC>O
-inoremap (<CR> (<CR>)<ESC>O
-inoremap [<CR> [<CR>]<ESC>O
+inoremap {<CR> {<CR>}<ESC>O<tab>
+inoremap (<CR> (<CR>)<ESC>O<tab>
+inoremap [<CR> [<CR>]<ESC>O<tab>
 "/*}}}*/
 
 " Wrap whole word in bracket or qoutes

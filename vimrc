@@ -84,7 +84,7 @@ set number		" Line indexing
 set title		" Display filename on title bar
 set ignorecase		" Search case-insensitive
 set smartcase		" Search case-sensitive when using capital letter
-set hlsearch		" Highlight search results
+set hlsearch incsearch	" Highlight search results
 set autoindent		" Auto indent on newline
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0

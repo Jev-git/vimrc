@@ -63,8 +63,22 @@ endif
 
 
 
-" Small tweaks here and there
+
+
+
+
+
+
+
+
+
+
+
+" Vimrc file of Hans-ICT, started at line 77 for luck :)
+
+" Editor configs, small tweaks here and there
 "/*{{{*/
+let mapleader = ","
 set path+=**		" Recursive path search
 set number		" Line indexing
 set title		" Display filename on title bar
@@ -72,16 +86,30 @@ set ignorecase		" Search case-insensitive
 set smartcase		" Search case-sensitive when using capital letter
 set hlsearch		" Highlight search results
 set autoindent		" Auto indent on newline
-let mapleader = ","
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 "/*}}}*/
+
+" Abbreviation list, for insert mode
+"/*{{{*/
+iabbrev <leader>@ tuannguyendinh224@gmail.com
+"/*}}}*/
+
+" Mappings
+" For all FileType
+"/*{{{*/
 
 " Rebind esc 
 "/*{{{*/
 noremap! <leader><leader> <esc>l
 vnoremap <leader><leader> <esc>l
 cabbrev <leader><leader> <esc>
+"/*}}}*/
+
+" Quickly open and source vimrc"
+"/*{{{*/
+nnoremap <leader>rc :vsplit $VIM/vimrc<cr>
+nnoremap <leader>src :source $VIM/vimrc<cr>
 "/*}}}*/
 
 " Template files
@@ -142,10 +170,6 @@ inoremap <C-k> <C-x><C-y>
 inoremap <C-j> <C-x><C-e>
 "/*}}}*/
 
-" Quickly open and source vimrc"
-nnoremap <leader>rc :vsplit $VIM/vimrc<cr>
-nnoremap <leader>src :source $VIM/vimrc<cr>
-
 " Easier splitting
 "/*{{{*/
 nnoremap <leader>w <C-w>
@@ -153,9 +177,6 @@ nnoremap <leader>wv <C-w>v<C-w>l
 nnoremap <leader>ws <C-w>s<C-w>j
 nnoremap <leader>wo :only<cr>
 "/*}}}*/
-
-" Useful abbreviations
-iabbrev <leader>@ tuannguyendinh224@gmail.com
 
 " Toggle: relativenumber, hlsearch
 "/*{{{*/
@@ -166,13 +187,16 @@ nnoremap <leader>hl :set<space>hlsearch!<cr>
 "/*}}}*/
 
 " Add newline from normal mode
+"/*{{{*/
 nnoremap <leader>o o<esc>k
 nnoremap <leader>O O<esc>j
+"/*}}}*/
 
-" Auto indent at open and save
-autocmd BufWritePre,BufRead *.html :normal gg=G
+"/*}}}*/
 
-" Autocmd grouping 
+" For specific FileType
+"/*{{{*/
+
 " Filetype Javascript
 " /*{{{*/
 :augroup filetype_js
@@ -201,3 +225,5 @@ autocmd BufWritePre,BufRead *.html :normal gg=G
 :	autocmd FileType vim nnoremap <buffer> <leader>d zd
 :augroup end
 " /*}}}*/
+
+"/*}}}*/

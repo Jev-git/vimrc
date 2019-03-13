@@ -187,5 +187,9 @@ autocmd BufWritePre,BufRead *.html :normal gg=G
 :augroup filetype_vim
 :	autocmd!
 :	autocmd FileType vim setlocal foldmethod=marker
+:	autocmd FileType vim nnoremap <buffer> <leader>a za
+:	autocmd FileType vim inoremap <buffer> <leader>a <esc>za
+:	autocmd FileType vim vnoremap <buffer> <leader>f zf
+:	autocmd FileType vim nnoremap <buffer> <leader>d zd
 :augroup end
 " /*}}}*/

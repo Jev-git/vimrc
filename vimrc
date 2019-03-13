@@ -157,9 +157,13 @@ nnoremap <leader>wo :only<cr>
 " Useful abbreviations
 iabbrev <leader>@ tuannguyendinh224@gmail.com
 
-" Toggle relativenumber
+" Toggle: relativenumber, hlsearch
+"/*{{{*/
 inoremap <leader>re <esc>:set<space>relativenumber!<cr>a
 nnoremap <leader>re :set<space>relativenumber!<cr>
+inoremap <leader>hl <esc>:set<space>hlsearch!<cr>a
+nnoremap <leader>hl :set<space>hlsearch!<cr>
+"/*}}}*/
 
 " Add newline from normal mode
 nnoremap <leader>o o<esc>k

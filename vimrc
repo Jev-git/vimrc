@@ -137,15 +137,10 @@ inoremap <leader>l <right>
 
 " Auto closing brackets in insert mode
 "/*{{{*/
-inoremap " ""<left>
-inoremap ' ''<left>
-
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 
-inoremap "" ""
-inoremap '' ''
 inoremap () ()
 inoremap [] []
 inoremap {} {}

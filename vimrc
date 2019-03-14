@@ -87,6 +87,9 @@ set ignorecase		" Search case-insensitive
 set smartcase		" Search case-sensitive when using capital letter
 set hlsearch incsearch	" Highlight search results
 set autoindent		" Auto indent on newline
+set tabstop=4
+set shiftwidth=4
+set expandtab
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 "/*}}}*/
@@ -202,12 +205,6 @@ nnoremap <leader>O O<esc>j
 "/*{{{*/
 inoremap <expr> <leader>; getline('.') =~ ';$' ? "\<esc>mq\$x`qa" : "\<esc>mqA;\<esc>`qa"
 nnoremap <expr> <leader>; getline('.') =~ ';$' ? "mq\$x`q" : "mqA;\<esc>`q"
-"/*}}}*/
-
-" Open file explorer in a seperate tab on the left hand side
-"/*{{{*/
-nnoremap <leader>e :40vsplit<cr>:E<cr>
-inoremap <leader>e <esc>:40vsplit<cr>:E<cr>
 "/*}}}*/
 
 "/*}}}*/

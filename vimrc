@@ -81,6 +81,7 @@ endif
 let mapleader = ","
 set path+=**		" Recursive path search
 set number		" Line indexing
+set relativenumber	" Display relative line
 set title		" Display filename on title bar
 set ignorecase		" Search case-insensitive
 set smartcase		" Search case-sensitive when using capital letter
@@ -201,6 +202,12 @@ nnoremap <leader>O O<esc>j
 "/*{{{*/
 inoremap <expr> <leader>; getline('.') =~ ';$' ? "\<esc>mq\$x`qa" : "\<esc>mqA;\<esc>`qa"
 nnoremap <expr> <leader>; getline('.') =~ ';$' ? "mq\$x`q" : "mqA;\<esc>`q"
+"/*}}}*/
+
+" Open file explorer in a seperate tab on the left hand side
+"/*{{{*/
+nnoremap <leader>e :40vsplit<cr>:E<cr>
+inoremap <leader>e <esc>:40vsplit<cr>:E<cr>
 "/*}}}*/
 
 "/*}}}*/

@@ -74,7 +74,7 @@ endif
 
 
 
-" Vimrc file of Hans-ICT, started at line 77 for luck :)
+" Start at line 77, for some lucks :3"
 
 " Editor configs, small tweaks here and there
 "/*{{{*/
@@ -140,6 +140,8 @@ inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 
+inoremap "" ""
+inoremap '' ''
 inoremap () ()
 inoremap [] []
 inoremap {} {}

@@ -132,9 +132,6 @@ nnoremap <leader>php :-1read ~/.vim/templates/bracket.php<CR>o
 nnoremap <leader>flask :-1read ~/.vim/templates/flask.py<CR>
 "/*}}}*/
 
-" Move left and right in insert mode
-inoremap <leader>l <right>
-
 " Auto closing brackets in insert mode
 "/*{{{*/
 inoremap ( ()<left>

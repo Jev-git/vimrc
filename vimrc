@@ -120,7 +120,7 @@ nnoremap <leader>hl :set<space>hlsearch!<cr>
 
 " Open and source vimrc"
 "/*{{{*/
-nnoremap <leader>rc :vsplit $VIM/vimrc<cr>
+nnoremap <leader>rc :tabe $VIM/vimrc<cr>
 nnoremap <leader>src :source $VIM/vimrc<cr>
 "/*}}}*/
 

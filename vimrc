@@ -118,7 +118,7 @@ inoremap <leader>hl <esc>:set<space>hlsearch!<cr>a
 nnoremap <leader>hl :set<space>hlsearch!<cr>
 "/*}}}*/
 
-" Quickly open and source vimrc"
+" Open and source vimrc"
 "/*{{{*/
 nnoremap <leader>rc :vsplit $VIM/vimrc<cr>
 nnoremap <leader>src :source $VIM/vimrc<cr>
@@ -132,7 +132,7 @@ nnoremap <leader>php :-1read ~/.vim/templates/bracket.php<CR>o
 nnoremap <leader>flask :-1read ~/.vim/templates/flask.py<CR>
 "/*}}}*/
 
-" This mapping allows skip a single char to the right in insert mode to skip close brackets
+" Move left and right in insert mode
 inoremap <leader>l <right>
 
 " Auto closing brackets in insert mode
@@ -141,9 +141,9 @@ inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 
-inoremap () ()
-inoremap [] []
-inoremap {} {}
+inoremap ) <right>
+inoremap ] <right>
+inoremap } <right>
 
 inoremap {<CR> {<CR>}<ESC>O<tab>
 inoremap (<CR> (<CR>)<ESC>O<tab>

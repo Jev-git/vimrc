@@ -174,7 +174,7 @@ vnoremap <leader>[ <esc>`>a]<esc>`<i[<esc>
 vnoremap <leader>{ <esc>`>a}<esc>`<i{<esc>
 "/*}}}*/
 
-" Easier scrolling
+" Scrolling using j and k
 "/*{{{*/
 nnoremap <C-k> <C-y>
 nnoremap <C-j> <C-e>
@@ -182,7 +182,7 @@ inoremap <C-k> <C-x><C-y>
 inoremap <C-j> <C-x><C-e>
 "/*}}}*/
 
-" Easier splitting
+" Splitting windows
 "/*{{{*/
 nnoremap <leader>w <C-w>
 nnoremap <leader>wv <C-w>v<C-w>l

@@ -105,9 +105,11 @@ iabbrev <leader>@ tuannguyendinh224@gmail.com
 
 " Rebind esc 
 "/*{{{*/
-noremap! <leader><leader> <esc>l
-vnoremap <leader><leader> <esc>l
+inoremap <leader><leader> <esc>
+vnoremap <leader><leader> <esc>
 cabbrev <leader><leader> <esc>
+nnoremap <leader> <nop>
+inoremap jk <esc>
 "/*}}}*/
 
 " Toggle: relativenumber, hlsearch
@@ -197,6 +199,13 @@ nnoremap <leader>O O<esc>j
 "/*{{{*/
 inoremap <expr> <leader>; getline('.') =~ ';$' ? "\<esc>mq\$x`qa" : "\<esc>mqA;\<esc>`qa"
 nnoremap <expr> <leader>; getline('.') =~ ';$' ? "mq\$x`q" : "mqA;\<esc>`q"
+"/*}}}*/
+
+" Open new tab and switch tab
+"/*{{{*/
+nnoremap <leader>t :tabe<cr>
+nnoremap gk gt
+nnoremap gj gT
 "/*}}}*/
 
 "/*}}}*/

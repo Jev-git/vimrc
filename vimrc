@@ -204,8 +204,8 @@ nnoremap <expr> <leader>; getline('.') =~ ';$' ? "mq\$x`q" : "mqA;\<esc>`q"
 " Open new tab and switch tab
 "/*{{{*/
 nnoremap <leader>t :tabe<cr>
-nnoremap gk gt
-nnoremap gj gT
+nnoremap gl gt
+nnoremap gh gT
 "/*}}}*/
 
 "/*}}}*/
@@ -217,7 +217,8 @@ nnoremap gj gT
 "/*{{{*/
 augroup filetype_html
     autocmd!
-    autocmd FileType html inoremap > ><esc>yi<f>a</><esc>PF<i
+    autocmd FileType html inoremap <buffer> /> />
+    autocmd FileType html inoremap <buffer> > ><esc>F<lyiwA</><esc>PF<i
 augroup end
 "/*}}}*/
 " Filetype Javascript

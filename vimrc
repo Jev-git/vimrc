@@ -210,6 +210,14 @@ nnoremap gh gT
 " For specific FileType
 "/*{{{*/
 
+" Filetype Vim
+" /*{{{*/
+augroup filetype_vim
+	autocmd!
+	autocmd FileType vim setlocal foldmethod=marker
+	autocmd FileType vim setlocal foldcolumn=4
+augroup end
+" /*}}}*/
 " Filetype Html
 "/*{{{*/
 augroup filetype_html
@@ -235,18 +243,6 @@ augroup filetype_py
 	autocmd FileType python nnoremap <buffer> <leader>/ I#<esc>
 	autocmd FileType python inoremap <buffer> <leader>/ <esc>I#
 	autocmd FileType python iabbrev <buffer> try try:<cr>except:<esc><<O
-augroup end
-" /*}}}*/
-" Filetype Vim
-" /*{{{*/
-augroup filetype_vim
-	autocmd!
-	autocmd FileType vim setlocal foldmethod=marker
-	autocmd FileType vim setlocal foldcolumn=4
-	autocmd FileType vim nnoremap <buffer> <leader>a za
-	autocmd FileType vim inoremap <buffer> <leader>a <esc>za
-	autocmd FileType vim vnoremap <buffer> <leader>f zf
-	autocmd FileType vim nnoremap <buffer> <leader>d zd
 augroup end
 " /*}}}*/
 " Filetype Php

@@ -128,10 +128,7 @@ nnoremap <leader>src :source $VIM/vimrc<cr>
 
 " Template files
 "/*{{{*/
-nnoremap <leader>html :-1read ~/.vim/templates/index.html<CR>3jwf>a
-nnoremap <leader>lorem :-1read ~/.vim/templates/lorem.txt<CR>
-nnoremap <leader>php :-1read ~/.vim/templates/bracket.php<CR>o
-nnoremap <leader>flask :-1read ~/.vim/templates/flask.py<CR>
+nnoremap <leader>lorem :-1read ~/.vim/templates/others/lorem.txt<CR>
 "/*}}}*/
 
 " Auto closing brackets in insert mode
@@ -217,6 +214,7 @@ nnoremap gh gT
 "/*{{{*/
 augroup filetype_html
     autocmd!
+    autocmd FileType html nnoremap <buffer> <leader>html :-1read ~/.vim/templates/html/index.html<CR>3jwf>a
     autocmd FileType html inoremap <buffer> /> />
     autocmd FileType html inoremap <buffer> > ><esc>F<lyiwA</><esc>PF<i
 augroup end
@@ -233,6 +231,7 @@ augroup end
 " /*{{{*/
 augroup filetype_py
 	autocmd!
+    autocmd FileType python nnoremap <buffer> <leader>flask :-1read ~/.vim/templates/py/flask.py<CR>
 	autocmd FileType python nnoremap <buffer> <leader>/ I#<esc>
 	autocmd FileType python inoremap <buffer> <leader>/ <esc>I#
 	autocmd FileType python iabbrev <buffer> try try:<cr>except:<esc><<O
@@ -250,5 +249,11 @@ augroup filetype_vim
 	autocmd FileType vim nnoremap <buffer> <leader>d zd
 augroup end
 " /*}}}*/
+" Filetype Php
+"/*{{{*/
+augroup filetype_php
+    autocmd FileType php nnoremap <buffer> <leader>php :-1read ~/.vim/templates/php/bracket.php<CR>o
+augroup end
+"/*}}}*/
 
 "/*}}}*/

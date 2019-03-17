@@ -213,34 +213,41 @@ nnoremap gj gT
 " For specific FileType
 "/*{{{*/
 
+" Filetype Html
+"/*{{{*/
+augroup filetype_html
+    autocmd!
+    autocmd FileType html inoremap > ><esc>yi<f>a</><esc>PF<i
+augroup end
+"/*}}}*/
 " Filetype Javascript
 " /*{{{*/
-:augroup filetype_js
-:	autocmd!
-:	autocmd FileType javascript nnoremap <buffer> <leader>/ I//<esc>
-:	autocmd FileType javascript inoremap <buffer> <leader>/ <esc>I//
-:augroup end
+augroup filetype_js
+	autocmd!
+	autocmd FileType javascript nnoremap <buffer> <leader>/ I//<esc>
+	autocmd FileType javascript inoremap <buffer> <leader>/ <esc>I//
+augroup end
 "/*}}}*/
 " Filetype Python
 " /*{{{*/
-:augroup filetype_py
-:	autocmd!
-:	autocmd FileType python nnoremap <buffer> <leader>/ I#<esc>
-:	autocmd FileType python inoremap <buffer> <leader>/ <esc>I#
-:	autocmd FileType python iabbrev <buffer> try try:<cr>except:<esc><<O
-:augroup end
+augroup filetype_py
+	autocmd!
+	autocmd FileType python nnoremap <buffer> <leader>/ I#<esc>
+	autocmd FileType python inoremap <buffer> <leader>/ <esc>I#
+	autocmd FileType python iabbrev <buffer> try try:<cr>except:<esc><<O
+augroup end
 " /*}}}*/
 " Filetype Vim
 " /*{{{*/
-:augroup filetype_vim
-:	autocmd!
-:	autocmd FileType vim setlocal foldmethod=marker
-:	autocmd FileType vim setlocal foldcolumn=4
-:	autocmd FileType vim nnoremap <buffer> <leader>a za
-:	autocmd FileType vim inoremap <buffer> <leader>a <esc>za
-:	autocmd FileType vim vnoremap <buffer> <leader>f zf
-:	autocmd FileType vim nnoremap <buffer> <leader>d zd
-:augroup end
+augroup filetype_vim
+	autocmd!
+	autocmd FileType vim setlocal foldmethod=marker
+	autocmd FileType vim setlocal foldcolumn=4
+	autocmd FileType vim nnoremap <buffer> <leader>a za
+	autocmd FileType vim inoremap <buffer> <leader>a <esc>za
+	autocmd FileType vim vnoremap <buffer> <leader>f zf
+	autocmd FileType vim nnoremap <buffer> <leader>d zd
+augroup end
 " /*}}}*/
 
 "/*}}}*/

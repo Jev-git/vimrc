@@ -131,6 +131,14 @@ nnoremap <leader>src :source $VIM/vimrc<cr>
 nnoremap <leader>lorem :-1read ~/.vim/templates/others/lorem.txt<CR>
 "/*}}}*/
 
+" Jump to markers: <++>
+"/*{{{*/
+inoremap <leader>m <esc>/<++><cr>4cl
+nnoremap <leader>m /<++><cr>4x
+inoremap <leader>M <esc>?<++><cr>4cl
+nnoremap <leader>M ?<++><cr>4x
+"/*}}}*/
+
 " Auto closing brackets in insert mode
 "/*{{{*/
 inoremap ( ()<left>
@@ -141,9 +149,9 @@ inoremap ) <right>
 inoremap ] <right>
 inoremap } <right>
 
-inoremap {<CR> {<CR>}<ESC>O<tab>
-inoremap (<CR> (<CR>)<ESC>O<tab>
-inoremap [<CR> [<CR>]<ESC>O<tab>
+inoremap {<CR> {<CR>}<space><++><ESC>O<tab>
+inoremap (<CR> (<CR>)<space><++><ESC>O<tab>
+inoremap [<CR> [<CR>]<space><++><ESC>O<tab>
 "/*}}}*/
 
 " Wrap whole word in bracket or qoutes

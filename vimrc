@@ -134,9 +134,17 @@ nnoremap <leader>lorem :-1read ~/.vim/templates/others/lorem.txt<CR>
 " Jump to markers: <++>
 "/*{{{*/
 inoremap <leader>m <esc>/<++><cr>4cl
-nnoremap <leader>m /<++><cr>4x
+nnoremap <leader>m /<++><cr>4cl
 inoremap <leader>M <esc>?<++><cr>4cl
-nnoremap <leader>M ?<++><cr>4x
+nnoremap <leader>M ?<++><cr>4cl
+"/*}}}*/
+
+" Remove markers: <++>
+"/*{{{*/
+inoremap <leader>rm <esc>mm/<++><cr>4x`ma
+nnoremap <leader>rm mm/<++><cr>4x`m
+inoremap <leader>rM <esc>mm?<++><cr>4x`ma
+nnoremap <leader>rM mm?<++><cr>4x`m
 "/*}}}*/
 
 " Auto closing brackets in insert mode
@@ -213,6 +221,9 @@ nnoremap gl gt
 nnoremap gh gT
 "/*}}}*/
 
+" Find file with name
+nnoremap <leader>f :find<space>
+
 "/*}}}*/
 
 " For specific FileType
@@ -241,6 +252,7 @@ augroup filetype_js
 	autocmd!
 	autocmd FileType javascript nnoremap <buffer> <leader>/ I//<esc>
 	autocmd FileType javascript inoremap <buffer> <leader>/ <esc>I//
+    autocmd FileType Javascript iabbrev <buffer> class class<space>{<cr><++><cr>}2kea<space>
 augroup end
 "/*}}}*/
 " Filetype Python

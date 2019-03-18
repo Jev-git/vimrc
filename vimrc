@@ -252,7 +252,6 @@ augroup filetype_js
 	autocmd!
 	autocmd FileType javascript nnoremap <buffer> <leader>/ I//<esc>
 	autocmd FileType javascript inoremap <buffer> <leader>/ <esc>I//
-    autocmd FileType Javascript iabbrev <buffer> class class<space>{<cr><++><cr>}2kea<space>
 augroup end
 "/*}}}*/
 " Filetype Python

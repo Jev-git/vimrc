@@ -134,9 +134,9 @@ nnoremap <leader>lorem :-1read ~/.vim/templates/others/lorem.txt<CR>
 " Jump to markers: <++>
 "/*{{{*/
 inoremap <leader>m <esc>/<++><cr>4cl
-nnoremap <leader>m /<++><cr>4cl
+nnoremap <leader>m /<++><cr>4x
 inoremap <leader>M <esc>?<++><cr>4cl
-nnoremap <leader>M ?<++><cr>4cl
+nnoremap <leader>M ?<++><cr>4x
 "/*}}}*/
 
 " Remove markers: <++>

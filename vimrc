@@ -120,13 +120,13 @@ nnoremap <leader>re :setlocal<space>relativenumber!<cr>
 inoremap <leader>hl <esc>:call ToggleHlSearch()<cr>a
 nnoremap <leader>hl :call ToggleHlSearch()<cr>
 
-fun! ToggleHlSearch()
+function! ToggleHlSearch()
    if &hlsearch
         setlocal nohlsearch
    else
         setlocal hlsearch incsearch
    endif
-endfun
+endfunction
 "/*}}}*/
 
 " Open and source vimrc"

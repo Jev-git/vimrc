@@ -209,12 +209,6 @@ nnoremap <leader>o o<esc>k
 nnoremap <leader>O O<esc>j
 "/*}}}*/
 
-" Add/remove semicolon at end of line
-"/*{{{*/
-inoremap <expr> <leader>; getline('.') =~ ';$' ? "\<esc>mq\$x`qa" : "\<esc>mqA;\<esc>`qa"
-nnoremap <expr> <leader>; getline('.') =~ ';$' ? "mq\$x`q" : "mqA;\<esc>`q"
-"/*}}}*/
-
 " Open new tab and switch tab
 "/*{{{*/
 nnoremap <leader>t :tabedit<cr>
@@ -251,8 +245,8 @@ augroup end
 " /*{{{*/
 augroup filetype_js
 	autocmd!
-	autocmd FileType javascript nnoremap <buffer> <leader>/ I//<esc>
-	autocmd FileType javascript inoremap <buffer> <leader>/ <esc>I//
+    autocmd FileType javascript inoremap <buffer> <expr> <leader>/ getline('.') =~ '^//' ? "\<esc>mm\^2x`ma" : "\<esc>mmI//\<esc>`ma"
+    autocmd FileType javascript nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^//' ? "mm\^2x`m" : "mmI//\<esc>`m"
 augroup end
 "/*}}}*/
 " Filetype Python
@@ -260,9 +254,8 @@ augroup end
 augroup filetype_py
 	autocmd!
     autocmd FileType python nnoremap <buffer> <leader>flask :-1read ~/.vim/templates/py/flask.py<CR>
-	autocmd FileType python nnoremap <buffer> <leader>/ I#<esc>
-	autocmd FileType python inoremap <buffer> <leader>/ <esc>I#
-	autocmd FileType python iabbrev <buffer> try try:<cr>except:<esc><<O
+    autocmd FileType python inoremap <buffer> <expr> <leader>/ getline('.') =~ '^#' ? "\<esc>mm\^x`ma" : "\<esc>mmI#\<esc>`ma"
+    autocmd FileType python nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^#' ? "mm\^x`m" : "mmI#\<esc>`m"
 augroup end
 " /*}}}*/
 " Filetype Php

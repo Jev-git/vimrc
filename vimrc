@@ -85,7 +85,7 @@ set relativenumber	" Display relative line
 set title		" Display filename on title bar
 set ignorecase		" Search case-insensitive
 set smartcase		" Search case-sensitive when using capital letter
-set hlsearch incsearch	" Highlight search results
+set hlsearch        " Highlight search results
 set autoindent		" Auto indent on newline
 set tabstop=4
 set shiftwidth=4
@@ -105,11 +105,12 @@ iabbrev <leader>@ tuannguyendinh224@gmail.com
 
 " Rebind esc 
 "/*{{{*/
+nnoremap <leader> <nop>
 inoremap <leader><leader> <esc>
 vnoremap <leader><leader> <esc>
-cabbrev <leader><leader> <esc>
-nnoremap <leader> <nop>
+cnoremap <leader><leader> <esc>
 inoremap jk <esc>
+cnoremap jk <esc>
 "/*}}}*/
 
 " Toggle: relativenumber, hlsearch
@@ -122,7 +123,7 @@ nnoremap <leader>hl :set<space>hlsearch!<cr>
 
 " Open and source vimrc"
 "/*{{{*/
-nnoremap <leader>rc :tabe $VIM/vimrc<cr>
+nnoremap <leader>rc :tabedit $VIM/vimrc<cr>
 nnoremap <leader>src :source $VIM/vimrc<cr>
 "/*}}}*/
 
@@ -139,7 +140,7 @@ inoremap <leader>M <esc>?<++><cr>4cl
 nnoremap <leader>M ?<++><cr>4x
 "/*}}}*/
 
-" Remove markers: <++>
+" Remove markers without jumping: <++>
 "/*{{{*/
 inoremap <leader>rm <esc>mm/<++><cr>4x`ma
 nnoremap <leader>rm mm/<++><cr>4x`m
@@ -216,7 +217,7 @@ nnoremap <expr> <leader>; getline('.') =~ ';$' ? "mq\$x`q" : "mqA;\<esc>`q"
 
 " Open new tab and switch tab
 "/*{{{*/
-nnoremap <leader>t :tabe<cr>
+nnoremap <leader>t :tabedit<cr>
 nnoremap gl gt
 nnoremap gh gT
 "/*}}}*/

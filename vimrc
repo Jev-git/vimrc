@@ -85,7 +85,7 @@ set relativenumber	" Display relative line
 set title		" Display filename on title bar
 set ignorecase		" Search case-insensitive
 set smartcase		" Search case-sensitive when using capital letter
-set hlsearch        " Highlight search results
+set hlsearch incsearch        " Highlight search results
 set autoindent		" Auto indent on newline
 set tabstop=4
 set shiftwidth=4
@@ -115,10 +115,18 @@ cnoremap jk <esc>
 
 " Toggle: relativenumber, hlsearch
 "/*{{{*/
-inoremap <leader>re <esc>:set<space>relativenumber!<cr>a
-nnoremap <leader>re :set<space>relativenumber!<cr>
-inoremap <leader>hl <esc>:set<space>hlsearch!<cr>a
-nnoremap <leader>hl :set<space>hlsearch!<cr>
+inoremap <leader>re <esc>:setlocal<space>relativenumber!<cr>a
+nnoremap <leader>re :setlocal<space>relativenumber!<cr>
+inoremap <leader>hl <esc>:call ToggleHlSearch()<cr>a
+nnoremap <leader>hl :call ToggleHlSearch()<cr>
+
+fun! ToggleHlSearch()
+   if &hlsearch
+        setlocal nohlsearch
+   else
+        setlocal hlsearch incsearch
+   endif
+endfun
 "/*}}}*/
 
 " Open and source vimrc"

@@ -148,6 +148,16 @@ inoremap <leader>M <esc>?<++><cr>4cl
 nnoremap <leader>M ?<++><cr>4x
 "/*}}}*/
 
+" Create markers: <++>
+"/*{{{*/
+inoremap <leader>cm <++>
+nnoremap <leader>cm i<++><esc>
+inoremap <leader>co <esc>mmo<++><esc>`ma
+nnoremap <leader>co mmo<++><esc>`m
+inoremap <leader>cO <esc>mmO<++><esc>`ma
+nnoremap <leader>cO mmO<++><esc>`m
+"/*}}}*/
+
 " Remove markers without jumping: <++>
 "/*{{{*/
 inoremap <leader>rm <esc>mm/<++><cr>4x`ma
@@ -270,6 +280,8 @@ augroup end
 "/*{{{*/
 augroup filetype_php
     autocmd FileType php nnoremap <buffer> <leader>php :-1read ~/.vim/templates/php/bracket.php<CR>o
+    autocmd FileType php inoremap <buffer> <expr> <leader>/ getline('.') =~ '^//' ? "\<esc>mm\^2x`ma" : "\<esc>mmI//\<esc>`ma"
+    autocmd FileType php nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^//' ? "mm\^2x`m" : "mmI//\<esc>`m"
 augroup end
 "/*}}}*/
 

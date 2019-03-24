@@ -105,10 +105,13 @@ iabbrev <leader>@ tuannguyendinh224@gmail.com
 
 " Rebind esc 
 "/*{{{*/
+inoremap <esc> <nop>
+
 nnoremap <leader> <nop>
 inoremap <leader><leader> <esc>
 vnoremap <leader><leader> <esc>
 cnoremap <leader><leader> <esc>
+
 inoremap jk <esc>
 cnoremap jk <esc>
 "/*}}}*/

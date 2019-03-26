@@ -27,11 +27,6 @@ let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 "/*}}}*/
 
-" Abbreviation list, for insert mode
-"/*{{{*/
-iabbrev <leader>@ tuannguyendinh224@gmail.com
-"/*}}}*/
-
 " Mappings
 " For all FileType
 "/*{{{*/
@@ -177,8 +172,8 @@ nnoremap <leader>f :find<space>
 
 " Indent whole file
 "/*{{{*/
-inoremap <leader>g <esc>mmgg=G`ma
-nnoremap <leader>g mmgg=G`m
+inoremap <leader>g <esc>mmgg=G`m25<C-e>a
+nnoremap <leader>g mmgg=G`m25<C-e>
 "/*}}}*/
 
 "/*}}}*/

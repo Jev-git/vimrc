@@ -112,9 +112,9 @@ inoremap ) <right>
 inoremap ] <right>
 inoremap } <right>
 
-inoremap {<CR> {<CR>}<space><++><ESC>O<tab>
-inoremap (<CR> (<CR>)<space><++><ESC>O<tab>
-inoremap [<CR> [<CR>]<space><++><ESC>O<tab>
+inoremap {<CR> {<CR>}<++><ESC>O<tab>
+inoremap (<CR> (<CR>)<++><ESC>O<tab>
+inoremap [<CR> [<CR>]<++><ESC>O<tab>
 "/*}}}*/
 
 " Wrap whole word in bracket or qoutes
@@ -172,6 +172,12 @@ nnoremap gh gT
 
 " Find file with name
 nnoremap <leader>f :find<space>
+
+" Indent whole file
+"/*{{{*/
+inoremap <leader>g <esc>mmgg=G`ma
+nnoremap <leader>g mmgg=G`m
+"/*}}}*/
 
 "/*}}}*/
 

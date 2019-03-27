@@ -161,8 +161,6 @@ nnoremap <leader>O O<esc>j
 " Open new tab and switch tab
 "/*{{{*/
 nnoremap <leader>t :tabedit<cr>
-inoremap gl <esc>gt
-inoremap gh <esc>gT
 nnoremap gl gt
 nnoremap gh gT
 "/*}}}*/

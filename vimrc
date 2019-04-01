@@ -21,6 +21,7 @@ set smartcase		" Search case-sensitive when using capital letter
 set hlsearch incsearch        " Highlight search results
 set autoindent		" Auto indent on newline
 set tabstop=4
+set softtabstop=4       " Remove 4 space when press <BS> to delete a <Tab>
 set shiftwidth=4
 set expandtab
 let g:netrw_liststyle = 3

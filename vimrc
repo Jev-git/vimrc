@@ -171,8 +171,8 @@ nnoremap <leader>f :find<space>
 
 " Indent whole file
 "/*{{{*/
-inoremap <leader>g <esc>mmgg=G`m25<C-e>a
-nnoremap <leader>g mmgg=G`m25<C-e>
+inoremap <leader>g <esc>mmgg=G`ma
+nnoremap <leader>g mmgg=G`m
 "/*}}}*/
 
 " Break line

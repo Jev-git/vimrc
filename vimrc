@@ -175,6 +175,9 @@ inoremap <leader>g <esc>mmgg=G`m25<C-e>a
 nnoremap <leader>g mmgg=G`m25<C-e>
 "/*}}}*/
 
+" Break line
+nnoremap K i<cr><esc>
+
 "/*}}}*/
 
 " For specific FileType

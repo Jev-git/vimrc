@@ -155,8 +155,8 @@ nnoremap <leader>wo :only<cr>
 
 " Add newline from normal mode
 "/*{{{*/
-nnoremap <leader>o o<esc>k
-nnoremap <leader>O O<esc>j
+nnoremap <leader>o mmo<esc>`m
+nnoremap <leader>O mmO<esc>`m
 "/*}}}*/
 
 " Open new tab and switch tab

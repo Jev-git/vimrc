@@ -204,8 +204,8 @@ augroup end
 " /*{{{*/
 augroup filetype_js
 	autocmd!
-    autocmd FileType javascript inoremap <buffer> <expr> <leader>/ getline('.') =~ '^//' ? "\<esc>mm\^2x`ma" : "\<esc>mmI//\<esc>`ma"
-    autocmd FileType javascript nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^//' ? "mm\^2x`m" : "mmI//\<esc>`m"
+    autocmd FileType javascript inoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*//' ? "\<esc>mm\^dw`ma" : "\<esc>mmI//<space>\<esc>`ma"
+    autocmd FileType javascript nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*//' ? "mm\^dw`m" : "mmI//<space>\<esc>`m"
 augroup end
 "/*}}}*/
 " Filetype Python

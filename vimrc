@@ -198,6 +198,8 @@ augroup filetype_html
     autocmd FileType html nnoremap <buffer> <leader>html :-1read ~/.vim/templates/html/index.html<CR>3jwf>a
     autocmd FileType html inoremap <buffer> /> />
     autocmd FileType html inoremap <buffer> > ><esc>F<lyiwA</><esc>PF<i
+    autocmd FileType html <buffer> filetype indent on
+    autocmd FileType html <buffer> set smartindent
 augroup end
 "/*}}}*/
 " Filetype Javascript

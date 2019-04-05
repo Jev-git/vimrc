@@ -24,6 +24,8 @@ set tabstop=4
 set softtabstop=4       " Remove 4 space when press <BS> to delete a <Tab>
 set shiftwidth=4
 set expandtab
+filetype indent on
+set smartindent
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 "/*}}}*/
@@ -198,8 +200,6 @@ augroup filetype_html
     autocmd FileType html nnoremap <buffer> <leader>html :-1read ~/.vim/templates/html/index.html<CR>3jwf>a
     autocmd FileType html inoremap <buffer> /> />
     autocmd FileType html inoremap <buffer> > ><esc>F<lyiwA</><esc>PF<i
-    autocmd FileType html <buffer> filetype indent on
-    autocmd FileType html <buffer> set smartindent
 augroup end
 "/*}}}*/
 " Filetype Javascript

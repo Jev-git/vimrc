@@ -212,7 +212,6 @@ augroup end
 " /*{{{*/
 augroup filetype_py
 	autocmd!
-    autocmd FileType python nnoremap <buffer> <leader>flask :-1read ~/.vim/templates/py/flask.py<CR>
     autocmd FileType python inoremap <buffer> <expr> <leader>/ getline('.') =~ '^#' ? "\<esc>mm\^x`ma" : "\<esc>mmI#\<esc>`ma"
     autocmd FileType python nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^#' ? "mm\^x`m" : "mmI#\<esc>`m"
 augroup end

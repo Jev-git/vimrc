@@ -180,6 +180,12 @@ nnoremap <leader>g mmgg=G`m
 " Break line
 nnoremap K i<cr><esc>
 
+" Toggle paste mode
+"/*{{{*/
+inoremap <leader>p <esc>:setlocal<space>paste!<cr>:setlocal<space>paste?<cr>a
+nnoremap <leader>p :setlocal<space>paste!<cr>:setlocal<space>paste?<cr>
+"/*}}}*/
+
 "/*}}}*/
 
 " For specific FileType

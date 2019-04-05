@@ -212,8 +212,8 @@ augroup end
 " /*{{{*/
 augroup filetype_py
 	autocmd!
-    autocmd FileType python inoremap <buffer> <expr> <leader>/ getline('.') =~ '^#' ? "\<esc>mm\^x`ma" : "\<esc>mmI#\<esc>`ma"
-    autocmd FileType python nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^#' ? "mm\^x`m" : "mmI#\<esc>`m"
+    autocmd FileType python inoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*#' ? "\<esc>mm\^dw`ma" : "\<esc>mmI#<space>\<esc>`ma"
+    autocmd FileType python nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*#' ? "mm\^dw`m" : "mmI#<space>\<esc>`m"
 augroup end
 " /*}}}*/
 " Filetype Php

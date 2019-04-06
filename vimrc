@@ -24,6 +24,7 @@ set tabstop=4
 set softtabstop=4       " Remove 4 space when press <BS> to delete a <Tab>
 set shiftwidth=4
 set expandtab
+color molokai
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 "/*}}}*/
@@ -184,6 +185,12 @@ inoremap <leader>p <esc>:setlocal<space>paste!<cr>:setlocal<space>paste?<cr>a
 nnoremap <leader>p :setlocal<space>paste!<cr>:setlocal<space>paste?<cr>
 "/*}}}*/
 
+" Replace Ctrl-n for autocomplete, cuz it hurts my wrist
+"/*{{{*/
+inoremap JK <C-n>
+inoremap KJ <C-p>
+"/*}}}*/
+
 "/*}}}*/
 
 " For specific FileType
@@ -212,6 +219,7 @@ augroup filetype_js
 	autocmd!
     autocmd FileType javascript inoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*//' ? "\<esc>mm\^dw`ma" : "\<esc>mmI//<space>\<esc>`ma"
     autocmd FileType javascript nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*//' ? "mm\^dw`m" : "mmI//<space>\<esc>`m"
+    autocmd FileType javascript iabbrev <buffer> for for (let i = 0; i <; i++) {<cr><++><up><right><right><right><right><right><right><right><right><right><right><right>
 augroup end
 "/*}}}*/
 " Filetype Python

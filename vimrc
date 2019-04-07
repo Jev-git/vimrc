@@ -162,7 +162,7 @@ nnoremap <leader>O mmO<esc>`m
 
 " Open new tab and switch tab
 "/*{{{*/
-nnoremap <leader>t :tabedit<cr>:E<cr>
+nnoremap <leader>t :tabedit<cr>
 nnoremap gl gt
 nnoremap gh gT
 "/*}}}*/

@@ -219,7 +219,8 @@ augroup filetype_js
 	autocmd!
     autocmd FileType javascript inoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*//' ? "\<esc>mm\^dw`ma" : "\<esc>mmI//<space>\<esc>`ma"
     autocmd FileType javascript nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*//' ? "mm\^dw`m" : "mmI//<space>\<esc>`m"
-    autocmd FileType javascript iabbrev <buffer> for for (let i = 0; i <; i++) {<cr><++><up><right><right><right><right><right><right><right><right><right><right><right>
+    autocmd FileType javascript iabbrev <buffer> fori for (let i = 0; i <; i++) {<cr><++><up><right><right><right><right><right><right><right><right><right><right><right>
+    autocmd FileType javascript iabbrev <buffer> forj for (let j = 0; j <; j++) {<cr><++><up><right><right><right><right><right><right><right><right><right><right><right>
 augroup end
 "/*}}}*/
 " Filetype Python

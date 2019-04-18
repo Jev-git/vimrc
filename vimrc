@@ -192,7 +192,7 @@ inoremap KJ <C-p>
 "/*}}}*/
 
 " Search for definitions using tags
-nnoremap gp <c-w>v<c-w>w<c-]>
+nnoremap gp <c-]>
 
 " Move to older/newer cursor position
 "/*{{{*/

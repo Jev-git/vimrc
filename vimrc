@@ -241,8 +241,8 @@ augroup end
 "/*}}}*/
 " Filetype Cpp /*{{{*/
 augroup filetype_cpp
-    autocmd FileType php inoremap <buffer> <expr> <leader>/ getline('.') =~ '^//' ? "\<esc>mm\^2x`ma" : "\<esc>mmI//\<esc>`ma"
-    autocmd FileType php nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^//' ? "mm\^2x`m" : "mmI//\<esc>`m"
+    autocmd FileType cpp inoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*//' ? "\<esc>mm\^dw`ma" : "\<esc>mmI//<space>\<esc>`ma"
+    autocmd FileType cpp nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*//' ? "mm\^dw`m" : "mmI//<space>\<esc>`m"
 augroup end
 "/*}}}*/
 "/*}}}*/

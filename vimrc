@@ -9,8 +9,7 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
-" Editor configs, small tweaks here and there
-"/*{{{*/
+" Editor configs, small tweaks here and there "/*{{{*/
 let mapleader = ","
 set path+=**		" Recursive path search
 set number		" Line indexing
@@ -30,8 +29,7 @@ let g:netrw_banner = 0
 "/*}}}*/
 
 " Mappings
-" For all FileType
-"/*{{{*/
+" For all FileType "/*{{{*/
 
 " Rebind esc 
 "/*{{{*/
@@ -202,19 +200,15 @@ nnoremap gi <c-i>
 
 "/*}}}*/
 
-" For specific FileType
-"/*{{{*/
-
-" Filetype Vim
-" /*{{{*/
+" For specific FileType "/*{{{*/
+" Filetype Vim " /*{{{*/
 augroup filetype_vim
 	autocmd!
 	autocmd FileType vim setlocal foldmethod=marker
 	autocmd FileType vim setlocal foldcolumn=4
 augroup end
 " /*}}}*/
-" Filetype Html
-"/*{{{*/
+" Filetype Html "/*{{{*/
 augroup filetype_html
     autocmd!
     autocmd FileType html nnoremap <buffer> <leader>html :-1read ~/.vim/templates/html/index.html<CR>3jwf>a
@@ -222,8 +216,7 @@ augroup filetype_html
     autocmd FileType html inoremap <buffer> > ><esc>F<lyiwA</><esc>PF<i
 augroup end
 "/*}}}*/
-" Filetype Javascript
-" /*{{{*/
+" Filetype Javascript " /*{{{*/
 augroup filetype_js
 	autocmd!
     autocmd FileType javascript inoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*//' ? "\<esc>mm\^dw`ma" : "\<esc>mmI//<space>\<esc>`ma"
@@ -232,21 +225,24 @@ augroup filetype_js
     autocmd FileType javascript iabbrev <buffer> forj for (let j = 0; j <; j++) {<cr><++><up><right><right><right><right><right><right><right><right><right><right><right>
 augroup end
 "/*}}}*/
-" Filetype Python
-" /*{{{*/
+" Filetype Python " /*{{{*/
 augroup filetype_py
 	autocmd!
     autocmd FileType python inoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*#' ? "\<esc>mm\^dw`ma" : "\<esc>mmI#<space>\<esc>`ma"
     autocmd FileType python nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*#' ? "mm\^dw`m" : "mmI#<space>\<esc>`m"
 augroup end
 " /*}}}*/
-" Filetype Php
-"/*{{{*/
+" Filetype Php "/*{{{*/
 augroup filetype_php
     autocmd FileType php nnoremap <buffer> <leader>php :-1read ~/.vim/templates/php/bracket.php<CR>o
     autocmd FileType php inoremap <buffer> <expr> <leader>/ getline('.') =~ '^//' ? "\<esc>mm\^2x`ma" : "\<esc>mmI//\<esc>`ma"
     autocmd FileType php nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^//' ? "mm\^2x`m" : "mmI//\<esc>`m"
 augroup end
 "/*}}}*/
-
+" Filetype Cpp /*{{{*/
+augroup filetype_cpp
+    autocmd FileType php inoremap <buffer> <expr> <leader>/ getline('.') =~ '^//' ? "\<esc>mm\^2x`ma" : "\<esc>mmI//\<esc>`ma"
+    autocmd FileType php nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^//' ? "mm\^2x`m" : "mmI//\<esc>`m"
+augroup end
+"/*}}}*/
 "/*}}}*/

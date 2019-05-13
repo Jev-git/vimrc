@@ -139,14 +139,14 @@ nnoremap gh gT
 "/*}}}*/
 " Find file with name/*{{{*/
 nnoremap <leader>f :find<space>
-/*}}}*/
+" /*}}}*/
 " Indent whole file "/*{{{*/
 inoremap <leader>g <esc>mmgg=G`ma
 nnoremap <leader>g mmgg=G`m
 "/*}}}*/
 " Break line/*{{{*/
 nnoremap K i<cr><esc>
-/*}}}*/
+" /*}}}*/
 " Toggle paste mode "/*{{{*/
 inoremap <leader>p <esc>:setlocal<space>paste!<cr>:setlocal<space>paste?<cr>a
 nnoremap <leader>p :setlocal<space>paste!<cr>:setlocal<space>paste?<cr>
@@ -157,11 +157,15 @@ inoremap KJ <C-p>
 "/*}}}*/
 " Search for definitions using tags/*{{{*/
 nnoremap gp <c-]>
-/*}}}*/
+" /*}}}*/
 " Move to older/newer cursor position "/*{{{*/
 nnoremap go <c-o>
 nnoremap gi <c-i>
 "/*}}}*/
+" Rearrange tabs/*{{{*/
+nnoremap t- :tabm -
+nnoremap t+ :tabm +
+" /*}}}*/
 
 "/*}}}*/
 

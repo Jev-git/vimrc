@@ -212,6 +212,8 @@ augroup end
 augroup filetype_cpp
     autocmd FileType cpp inoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*//' ? "\<esc>mm\^dw`ma" : "\<esc>mmI//<space>\<esc>`ma"
     autocmd FileType cpp nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*//' ? "mm\^dw`m" : "mmI//<space>\<esc>`m"
+    autocmd FileType cpp vnoremap <buffer> <leader>/ :normal!<space>I//<space><cr>
+    autocmd FileType cpp vnoremap <buffer> <leader>. :normal!<space>^dw<cr>
     autocmd FileType cpp iabbrev <buffer> fori for (int i = 0; i <; i++) {<cr><++><up><right><right><right><right><right><right><right><right><right><right><right>
     autocmd FileType cpp iabbrev <buffer> forj for (int j = 0; j <; j++) {<cr><++><up><right><right><right><right><right><right><right><right><right><right><right>
 augroup end

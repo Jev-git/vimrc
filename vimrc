@@ -166,6 +166,9 @@ nnoremap gi <c-i>
 nnoremap t- :tabm -
 nnoremap t+ :tabm +
 " /*}}}*/
+" Move a window to a new tab/*{{{*/
+nnoremap <leader>wt <C-w><S-t>
+"/*}}}*/
 
 "/*}}}*/
 

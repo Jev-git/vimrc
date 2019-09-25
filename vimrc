@@ -63,11 +63,13 @@ nnoremap <leader>src :source $VIM/vimrc<cr>
 " Template files "/*{{{*/
 nnoremap <leader>lorem :-1read ~/.vim/templates/others/lorem.txt<CR>
 "/*}}}*/
-" Jump to markers: <++> "/*{{{*/
+" Move to markers: <++> "/*{{{*/
 inoremap <leader>m <esc>/<++><cr>4cl
 nnoremap <leader>m /<++><cr>4x
-inoremap <leader>M <esc>?<++><cr>4cl
-nnoremap <leader>M ?<++><cr>4x
+"/*}}}*/
+" Move to markers (without deleting it)/*{{{*/
+inoremap <leader>M <esc>/<++><cr>
+nnoremap <leader>M /<++><cr>
 "/*}}}*/
 " Create markers: <++> "/*{{{*/
 inoremap <leader>cm <++>

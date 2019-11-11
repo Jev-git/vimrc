@@ -62,6 +62,7 @@ nnoremap <leader>src :source $VIM/vimrc<cr>
 "/*}}}*/
 " Template files "/*{{{*/
 nnoremap <leader>lorem :-1read ~/.vim/templates/others/lorem.txt<CR>
+nnoremap <leader>table :read ~/.vim/templates/others/table-throw.txt<CR>
 "/*}}}*/
 " Move to markers: <++> "/*{{{*/
 inoremap <leader>m <esc>/<++><cr>4cl

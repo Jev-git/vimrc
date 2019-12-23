@@ -23,6 +23,7 @@ set tabstop=4
 set softtabstop=4       " Remove 4 space when press <BS> to delete a <Tab>
 set shiftwidth=4
 set expandtab
+set tags=tags
 color molokai
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0

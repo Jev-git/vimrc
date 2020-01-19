@@ -9,6 +9,16 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+" Vim-plug/*{{{*/
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'calviken/vim-gdscript3'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+"/*}}}*/
 " Editor configs, small tweaks here and there "/*{{{*/
 let mapleader = ","
 set path+=**		" Recursive path search
@@ -28,7 +38,6 @@ color molokai
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
 "/*}}}*/
-
 " Mappings
 " For all FileType "/*{{{*/
 
@@ -175,7 +184,6 @@ nnoremap <leader>wt <C-w><S-t>
 "/*}}}*/
 
 "/*}}}*/
-
 " For specific FileType "/*{{{*/
 " Filetype Vim " /*{{{*/
 augroup filetype_vim

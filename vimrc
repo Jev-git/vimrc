@@ -235,4 +235,13 @@ augroup filetype_cpp
     autocmd FileType cpp iabbrev <buffer> forj for (int j = 0; j <; j++) {<cr><++><up><right><right><right><right><right><right><right><right><right><right><right>
 augroup end
 "/*}}}*/
+" Filetype GDscript " /*{{{*/
+augroup filetype_gdscript3
+	autocmd!
+    autocmd FileType gdscript3 inoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*#' ? "\<esc>mm\^dw`ma" : "\<esc>mmI#<space>\<esc>`ma"
+    autocmd FileType gdscript3 nnoremap <buffer> <expr> <leader>/ getline('.') =~ '^\s*#' ? "mm\^dw`m" : "mmI#<space>\<esc>`m"
+    autocmd FileType gdscript3 vnoremap <buffer> <leader>/ :normal!<space>I#<space><cr>
+    autocmd FileType gdscript3 vnoremap <buffer> <leader>. :normal!<space>^dw<cr>
+augroup end
+" /*}}}*/
 "/*}}}*/

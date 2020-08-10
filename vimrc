@@ -34,6 +34,9 @@ set softtabstop=4       " Remove 4 space when press <BS> to delete a <Tab>
 set shiftwidth=4
 set expandtab
 set tags=tags
+set foldmethod=syntax
+set foldcolumn=4
+set statusline=%F%=[%4l/%4L]
 color molokai
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0
